@@ -2,4 +2,4 @@
 
 This repo contains all the algorithm examples from our **Algorithm and Programming** course.
 
-Clone, explore, and master the basics of C! 😎
+Clone, explore and master the basics of C! 😎
