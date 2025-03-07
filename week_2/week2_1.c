@@ -61,20 +61,22 @@ void findMedian(int array[]) {
 }
 
 void findMode(int array[]) {
-    int maxCount = 0;
-    int mode = array[0];
+    int maxCount = 0; // Modun en yüksek tekrar sayısını saklamak için değişken
+    int mode = array[0]; // Mod olarak başlangıçta dizinin ilk elemanını varsayıyoruz
 
-    for (int i = 0; i < SIZE; i++) {
-        int count = 0;
-        for (int j = 0; j < SIZE; j++) {
-            if (array[i] == array[j]) count++;
+    for (int i = 0; i < SIZE; i++) {  // Dizinin her elemanı için döngü başlatıyoruz
+        int count = 0; // Mevcut elemanın kaç kez geçtiğini saymak için değişken
+
+        for (int j = 0; j < SIZE; j++) { // İç içe döngü ile dizinin her elemanını kontrol ediyoruz
+            if (array[i] == array[j]) count++; // Aynı elemanı buldukça sayacı artırıyoruz
         }
 
-        if (count > maxCount) {
-            maxCount = count;
-            mode = array[i];
+        if (count > maxCount) { // Eğer bu eleman, şu ana kadarki en sık tekrar eden elemandan fazla tekrar ettiyse
+            maxCount = count; // Yeni maksimum tekrar sayısını güncelliyoruz
+            mode = array[i]; // Mod değerini güncelliyoruz
         }
     }
 
+    // Bulunan modu ve kaç kez tekrar ettiğini ekrana yazdırıyoruz
     printf("Mode of the array is: %d (%d)\n", mode, maxCount);
 }
