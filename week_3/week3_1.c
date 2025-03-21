@@ -37,7 +37,7 @@ int main() {
     printf("**** Multi Matrix ****\n");
     multiMatrix(array1, array2);
 
-    printf("**** 1. Matrix Transpose ****\n");
+    printf("**** Matrix Transpose ****\n");
     transposeMatrix(targetMatrix);
 
     return 0;
